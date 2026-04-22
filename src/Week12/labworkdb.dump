@@ -1,0 +1,482 @@
+/*M!999999\- enable the sandbox mode */ 
+-- MariaDB dump 10.19  Distrib 10.11.16-MariaDB, for Linux (x86_64)
+--
+-- Host: localhost    Database: labwork
+-- ------------------------------------------------------
+-- Server version	10.11.16-MariaDB
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `customer`
+--
+
+DROP TABLE IF EXISTS `customer`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8mb4 */;
+CREATE TABLE `customer` (
+  `customer_id` int(11) NOT NULL,
+  `customer_name` varchar(200) DEFAULT NULL,
+  `city` varchar(50) DEFAULT NULL,
+  `grade` int(11) DEFAULT NULL,
+  `salesman_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`customer_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `customer`
+--
+
+LOCK TABLES `customer` WRITE;
+/*!40000 ALTER TABLE `customer` DISABLE KEYS */;
+INSERT INTO `customer` VALUES
+(3001,'Thomas Johnson','Rome',500,5006),
+(3002,'William Jones','Sydney',400,5004),
+(3003,'Jennifer Martinez','Toronto',200,5007),
+(3004,'Robert Martin','Toronto',400,5011),
+(3005,'Jessica Martinez','Tokyo',300,5012),
+(3006,'Joseph Brown','Rome',200,5004),
+(3007,'Charles Moore','London',400,5004),
+(3008,'David Jackson','Tokyo',100,5008),
+(3009,'Jessica Gonzalez','Madrid',500,5019),
+(3010,'Jennifer Johnson','San Jose',200,5007),
+(3011,'Linda Williams','Tokyo',200,5019),
+(3012,'William Miller','Toronto',400,5004),
+(3013,'Jennifer Martin','Berlin',300,5003),
+(3014,'Jessica Martin','San Jose',100,5010),
+(3015,'Michael Garcia','New York',300,5016),
+(3016,'Linda Jones','Rome',300,5008),
+(3017,'James Lopez','Rome',100,5001),
+(3018,'Karen Thomas','Rome',300,5008),
+(3019,'Susan Rodriguez','Paris',300,5017),
+(3020,'Patricia Wilson','Paris',500,5016),
+(3021,'Patricia Taylor','Rome',400,5016),
+(3022,'John Wilson','Toronto',100,5002),
+(3023,'Linda Thomas','Paris',500,5016),
+(3024,'Michael Hernandez','San Jose',500,5012),
+(3025,'Richard Martin','Madrid',300,5017),
+(3026,'John Moore','Tokyo',400,5003),
+(3027,'Sarah Jones','Tokyo',400,5003),
+(3028,'Susan Jones','Sydney',500,5002),
+(3029,'Thomas Brown','Berlin',300,5007),
+(3030,'Jennifer Brown','Madrid',500,5009),
+(3031,'Linda Lopez','Madrid',400,5014),
+(3032,'James Anderson','London',400,5020),
+(3033,'Thomas Smith','Toronto',400,5018),
+(3034,'William Gonzalez','Paris',200,5008),
+(3035,'Sarah Wilson','San Jose',400,5006),
+(3036,'Robert Thomas','Paris',300,5009),
+(3037,'Mary Martin','Rome',300,5012),
+(3038,'Patricia Martin','Tokyo',400,5017),
+(3039,'Jessica Rodriguez','Paris',100,5009),
+(3040,'Joseph Martinez','San Jose',200,5013),
+(3041,'William Martin','London',500,5003),
+(3042,'William Garcia','Madrid',200,5008),
+(3043,'Richard Williams','Madrid',400,5005),
+(3044,'Elizabeth Williams','Berlin',400,5006),
+(3045,'Patricia Gonzalez','Sydney',400,5013),
+(3046,'Susan Garcia','Sydney',300,5010),
+(3047,'James Jones','San Jose',200,5001),
+(3048,'Jessica Rodriguez','Rome',200,5008),
+(3049,'Michael Moore','Tokyo',500,5007),
+(3050,'Susan Rodriguez','Tokyo',300,5005),
+(3051,'Susan Jackson','London',500,5001),
+(3052,'Karen Garcia','Berlin',200,5019),
+(3053,'Jessica Gonzalez','Madrid',500,5011),
+(3054,'William Brown','London',300,5020),
+(3055,'Joseph Miller','London',200,5008),
+(3056,'Jennifer Hernandez','Tokyo',400,5016),
+(3057,'Linda Smith','Rome',100,5007),
+(3058,'Jennifer Garcia','Madrid',300,5006),
+(3059,'Jennifer Miller','Tokyo',500,5001),
+(3060,'William Rodriguez','Toronto',500,5008),
+(3061,'David Davis','Tokyo',300,5020),
+(3062,'Michael Jones','Toronto',300,5007),
+(3063,'Patricia Brown','Rome',300,5005),
+(3064,'Mary Gonzalez','Toronto',400,5018),
+(3065,'Barbara Jones','San Jose',300,5018),
+(3066,'Robert Lopez','New York',500,5001),
+(3067,'Richard Jones','Toronto',100,5010),
+(3068,'John Lopez','Paris',300,5020),
+(3069,'Jennifer Martinez','Sydney',200,5020),
+(3070,'David Thomas','Tokyo',300,5006),
+(3071,'James Smith','Berlin',400,5015),
+(3072,'David Martinez','New York',300,5004),
+(3073,'Michael Hernandez','San Jose',300,5017),
+(3074,'Michael Jackson','Madrid',300,5008),
+(3075,'Thomas Jones','Tokyo',400,5020),
+(3076,'William Davis','Madrid',500,5020),
+(3077,'Jessica Hernandez','Toronto',100,5003),
+(3078,'John Williams','San Jose',100,5005),
+(3079,'Karen Garcia','London',200,5006),
+(3080,'Jessica Garcia','San Jose',400,5005),
+(3081,'Elizabeth Martinez','Sydney',400,5009),
+(3082,'Joseph Brown','Berlin',200,5006),
+(3083,'Sarah Taylor','London',500,5004),
+(3084,'Thomas Martinez','Toronto',300,5010),
+(3085,'Richard Wilson','London',500,5017),
+(3086,'Patricia Johnson','London',100,5015),
+(3087,'James Wilson','Berlin',200,5018),
+(3088,'William Rodriguez','Tokyo',300,5006),
+(3089,'Patricia Davis','Madrid',400,5020),
+(3090,'Karen Lopez','Rome',400,5019),
+(3091,'James Williams','London',200,5007),
+(3092,'Elizabeth Lopez','Rome',100,5009),
+(3093,'Jennifer Smith','Madrid',500,5015),
+(3094,'Robert Martinez','Berlin',200,5019),
+(3095,'Michael Hernandez','Paris',400,5018),
+(3096,'Sarah Jones','Rome',200,5011),
+(3097,'Michael Gonzalez','Toronto',300,5014),
+(3098,'Barbara Smith','San Jose',100,5007),
+(3099,'Karen Rodriguez','San Jose',200,5019),
+(3100,'Jessica Jackson','Paris',500,5002),
+(3101,'Susan Hernandez','London',100,5003),
+(3102,'John Moore','Rome',400,5019),
+(3103,'Susan Anderson','Berlin',100,5001),
+(3104,'John Jackson','Rome',200,5006),
+(3105,'Jessica Lopez','Berlin',300,5020),
+(3106,'Linda Davis','Tokyo',200,5020),
+(3107,'Richard Johnson','Toronto',500,5005),
+(3108,'Thomas Smith','Tokyo',400,5004),
+(3109,'Thomas Rodriguez','New York',500,5010),
+(3110,'William Thomas','New York',400,5010),
+(3111,'William Anderson','Sydney',200,5014),
+(3112,'James Davis','Rome',300,5014),
+(3113,'Mary Moore','Tokyo',500,5006),
+(3114,'Robert Martinez','Tokyo',400,5015),
+(3115,'Karen Garcia','New York',500,5009),
+(3116,'Linda Brown','Madrid',100,5005),
+(3117,'Mary Davis','Madrid',500,5009),
+(3118,'David Taylor','San Jose',300,5011),
+(3119,'Karen Brown','Tokyo',200,5015),
+(3120,'Michael Brown','New York',300,5005),
+(3121,'David Smith','Berlin',500,5002),
+(3122,'John Lopez','Sydney',200,5010),
+(3123,'Thomas Johnson','Berlin',200,5018),
+(3124,'Jennifer Thomas','Paris',300,5001),
+(3125,'Elizabeth Moore','Toronto',300,5001),
+(3126,'Barbara Jones','Tokyo',500,5010),
+(3127,'Patricia Miller','New York',300,5013),
+(3128,'Richard Smith','London',300,5009),
+(3129,'Karen Rodriguez','Toronto',300,5005),
+(3130,'Patricia Martin','Paris',400,5014),
+(3131,'Barbara Moore','New York',100,5019),
+(3132,'Thomas Johnson','Madrid',200,5014),
+(3133,'Susan Anderson','London',300,5016),
+(3134,'Karen Lopez','Berlin',400,5010),
+(3135,'Michael Martin','Tokyo',300,5010),
+(3136,'David Miller','Paris',300,5014),
+(3137,'Mary Miller','Rome',200,5013),
+(3138,'John Williams','Berlin',300,5004),
+(3139,'Jessica Rodriguez','Toronto',300,5004),
+(3140,'Jessica Taylor','San Jose',200,5007),
+(3141,'Sarah Moore','San Jose',400,5007),
+(3142,'Charles Jones','Paris',500,5020),
+(3143,'Sarah Hernandez','London',400,5009),
+(3144,'Patricia Lopez','Sydney',300,5002),
+(3145,'Susan Smith','New York',200,5002),
+(3146,'David Brown','Paris',500,5004),
+(3147,'Robert Jones','New York',100,5012),
+(3148,'Michael Jones','Paris',300,5007),
+(3149,'Elizabeth Gonzalez','Tokyo',300,5014),
+(3150,'Robert Jackson','London',500,5001),
+(3151,'David Jackson','Tokyo',400,5001),
+(3152,'Jennifer Hernandez','Tokyo',500,5003),
+(3153,'Thomas Wilson','Paris',200,5014),
+(3154,'Karen Moore','Berlin',300,5001),
+(3155,'Charles Williams','Toronto',300,5016),
+(3156,'Linda Moore','Madrid',100,5003),
+(3157,'Elizabeth Wilson','New York',500,5004),
+(3158,'Susan Jackson','Madrid',400,5010),
+(3159,'Barbara Lopez','London',400,5017),
+(3160,'Linda Taylor','Toronto',200,5014),
+(3161,'Thomas Garcia','Sydney',500,5010),
+(3162,'William Martinez','Paris',200,5019),
+(3163,'Elizabeth Thomas','Rome',300,5017),
+(3164,'Sarah Thomas','Sydney',100,5007),
+(3165,'Michael Wilson','Madrid',500,5010),
+(3166,'Joseph Brown','San Jose',200,5016),
+(3167,'Charles Rodriguez','Toronto',400,5011),
+(3168,'Barbara Martin','Berlin',200,5013),
+(3169,'Jessica Davis','Berlin',100,5019),
+(3170,'Susan Moore','Rome',400,5012),
+(3171,'Linda Moore','Tokyo',500,5001),
+(3172,'Patricia Hernandez','New York',400,5007),
+(3173,'Jennifer Hernandez','Tokyo',300,5014),
+(3174,'Sarah Rodriguez','London',300,5020),
+(3175,'Thomas Jackson','Madrid',100,5019),
+(3176,'Thomas Hernandez','Sydney',500,5010),
+(3177,'David Thomas','Berlin',100,5018),
+(3178,'Patricia Jones','London',400,5003),
+(3179,'Sarah Moore','Paris',200,5018),
+(3180,'Thomas Miller','London',400,5019),
+(3181,'Sarah Anderson','Madrid',100,5020),
+(3182,'Joseph Jones','Paris',200,5009),
+(3183,'Richard Garcia','Toronto',500,5005),
+(3184,'Susan Jones','New York',400,5014),
+(3185,'Richard Thomas','Madrid',200,5016),
+(3186,'Karen Moore','Berlin',300,5001),
+(3187,'John Brown','Madrid',300,5006),
+(3188,'Patricia Martin','Berlin',300,5010),
+(3189,'Thomas Miller','Sydney',500,5003),
+(3190,'Patricia Lopez','San Jose',100,5014),
+(3191,'Elizabeth Hernandez','Berlin',200,5002),
+(3192,'Susan Thomas','San Jose',300,5006),
+(3193,'Linda Rodriguez','San Jose',400,5004),
+(3194,'Patricia Anderson','Sydney',500,5020),
+(3195,'Mary Miller','Toronto',100,5004),
+(3196,'Thomas Smith','Toronto',300,5005),
+(3197,'Charles Johnson','Tokyo',100,5005),
+(3198,'Susan Miller','San Jose',100,5007),
+(3199,'Jennifer Moore','Berlin',300,5013),
+(3200,'Susan Anderson','Sydney',100,5008);
+/*!40000 ALTER TABLE `customer` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `orders`
+--
+
+DROP TABLE IF EXISTS `orders`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8mb4 */;
+CREATE TABLE `orders` (
+  `order_no` int(11) NOT NULL,
+  `purchase_amt` double(10,2) DEFAULT NULL,
+  `order_date` datetime DEFAULT NULL,
+  `customer_id` int(11) DEFAULT NULL,
+  `salesman_id` int(11) DEFAULT NULL,
+  PRIMARY KEY (`order_no`),
+  KEY `customer_id` (`customer_id`),
+  KEY `salesman_id` (`salesman_id`),
+  CONSTRAINT `orders_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`customer_id`),
+  CONSTRAINT `orders_ibfk_2` FOREIGN KEY (`salesman_id`) REFERENCES `salesman` (`salesman_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `orders`
+--
+
+LOCK TABLES `orders` WRITE;
+/*!40000 ALTER TABLE `orders` DISABLE KEYS */;
+INSERT INTO `orders` VALUES
+(70001,2731.00,'2023-09-03 00:00:00',3138,5004),
+(70002,3885.26,'2023-05-27 00:00:00',3155,5016),
+(70003,3443.09,'2023-02-20 00:00:00',3058,5006),
+(70004,1465.58,'2023-07-29 00:00:00',3053,5011),
+(70005,604.53,'2023-11-26 00:00:00',3142,5020),
+(70006,3276.24,'2023-07-17 00:00:00',3027,5003),
+(70007,3571.71,'2023-05-26 00:00:00',3164,5007),
+(70008,3831.23,'2023-01-24 00:00:00',3151,5001),
+(70009,3782.04,'2023-11-10 00:00:00',3043,5005),
+(70010,1997.46,'2023-09-15 00:00:00',3044,5006),
+(70011,4019.36,'2023-10-08 00:00:00',3026,5003),
+(70012,468.26,'2023-12-21 00:00:00',3054,5020),
+(70013,412.04,'2023-05-03 00:00:00',3046,5010),
+(70014,2170.16,'2023-10-14 00:00:00',3150,5001),
+(70015,2477.19,'2023-08-28 00:00:00',3050,5005),
+(70016,1661.99,'2023-04-07 00:00:00',3129,5005),
+(70017,2132.02,'2023-04-26 00:00:00',3197,5005),
+(70018,1649.79,'2023-01-17 00:00:00',3026,5003),
+(70019,3957.03,'2023-02-22 00:00:00',3084,5010),
+(70020,201.95,'2023-10-12 00:00:00',3177,5018),
+(70021,2953.45,'2023-11-15 00:00:00',3019,5017),
+(70022,2022.77,'2023-01-27 00:00:00',3099,5019),
+(70023,1023.06,'2023-01-09 00:00:00',3101,5003),
+(70024,2072.13,'2023-05-30 00:00:00',3108,5004),
+(70025,4596.32,'2023-09-12 00:00:00',3200,5008),
+(70026,3643.81,'2023-12-29 00:00:00',3072,5004),
+(70027,2486.68,'2023-03-07 00:00:00',3022,5002),
+(70028,4435.13,'2023-08-28 00:00:00',3199,5013),
+(70029,2873.79,'2023-11-04 00:00:00',3012,5004),
+(70030,1635.71,'2023-11-04 00:00:00',3084,5010),
+(70031,4826.27,'2023-02-10 00:00:00',3158,5010),
+(70032,2196.22,'2023-04-10 00:00:00',3062,5007),
+(70033,2438.00,'2023-07-26 00:00:00',3091,5007),
+(70034,3467.63,'2023-02-01 00:00:00',3184,5014),
+(70035,3153.11,'2023-12-17 00:00:00',3163,5017),
+(70036,1781.47,'2023-06-15 00:00:00',3047,5001),
+(70037,535.70,'2023-09-15 00:00:00',3098,5007),
+(70038,193.67,'2023-07-14 00:00:00',3190,5014),
+(70039,2412.75,'2023-09-05 00:00:00',3191,5002),
+(70040,3626.94,'2023-05-30 00:00:00',3081,5009),
+(70041,4732.39,'2023-08-19 00:00:00',3115,5009),
+(70042,1283.05,'2023-01-18 00:00:00',3199,5013),
+(70043,665.31,'2023-11-03 00:00:00',3146,5004),
+(70044,711.90,'2023-10-31 00:00:00',3077,5003),
+(70045,2384.68,'2023-04-27 00:00:00',3043,5005),
+(70046,1965.49,'2023-06-26 00:00:00',3133,5016),
+(70047,3337.21,'2023-09-09 00:00:00',3101,5003),
+(70048,3759.76,'2023-08-30 00:00:00',3151,5001),
+(70049,1812.09,'2023-11-18 00:00:00',3147,5012),
+(70050,2006.88,'2023-07-01 00:00:00',3138,5004),
+(70051,2962.07,'2023-03-27 00:00:00',3167,5011),
+(70052,2045.73,'2023-06-03 00:00:00',3073,5017),
+(70053,4162.65,'2023-09-14 00:00:00',3160,5014),
+(70054,3761.06,'2023-05-23 00:00:00',3163,5017),
+(70055,894.02,'2023-06-27 00:00:00',3127,5013),
+(70056,4961.27,'2023-11-23 00:00:00',3041,5003),
+(70057,1499.35,'2023-07-11 00:00:00',3079,5006),
+(70058,2573.91,'2023-05-30 00:00:00',3110,5010),
+(70059,112.50,'2023-04-12 00:00:00',3034,5008),
+(70060,4890.30,'2023-08-05 00:00:00',3015,5016),
+(70061,3345.12,'2023-10-19 00:00:00',3172,5007),
+(70062,856.44,'2023-02-14 00:00:00',3088,5006),
+(70063,2190.00,'2023-06-22 00:00:00',3113,5006),
+(70064,4321.11,'2023-01-05 00:00:00',3126,5010),
+(70065,1250.75,'2023-03-18 00:00:00',3001,5006),
+(70066,334.20,'2023-09-29 00:00:00',3105,5020),
+(70067,2900.50,'2023-11-01 00:00:00',3060,5008),
+(70068,157.80,'2023-05-15 00:00:00',3156,5003),
+(70069,440.00,'2023-07-20 00:00:00',3030,5009),
+(70070,3120.99,'2023-12-10 00:00:00',3093,5015),
+(70071,210.33,'2023-04-05 00:00:00',3181,5020),
+(70072,4500.22,'2023-06-12 00:00:00',3009,5019),
+(70073,1190.50,'2023-02-28 00:00:00',3102,5019),
+(70074,3890.00,'2023-08-14 00:00:00',3045,5013),
+(70075,670.40,'2023-10-25 00:00:00',3065,5018),
+(70076,2340.15,'2023-03-12 00:00:00',3124,5001),
+(70077,456.78,'2023-01-22 00:00:00',3086,5015),
+(70078,1290.00,'2023-11-11 00:00:00',3130,5014),
+(70079,3450.60,'2023-09-09 00:00:00',3159,5017),
+(70080,890.25,'2023-07-30 00:00:00',3118,5011),
+(70081,2100.00,'2023-05-18 00:00:00',3052,5019),
+(70082,430.50,'2023-12-05 00:00:00',3140,5007),
+(70083,3320.75,'2023-02-15 00:00:00',3075,5020),
+(70084,1120.40,'2023-04-20 00:00:00',3094,5019),
+(70085,2560.90,'2023-06-25 00:00:00',3185,5016),
+(70086,4410.20,'2023-08-02 00:00:00',3049,5007),
+(70087,678.30,'2023-10-15 00:00:00',3107,5005),
+(70088,1230.45,'2023-01-30 00:00:00',3196,5005),
+(70089,3490.10,'2023-03-22 00:00:00',3004,5011),
+(70090,810.55,'2023-05-28 00:00:00',3014,5010),
+(70091,2190.20,'2023-07-12 00:00:00',3073,5017),
+(70092,4350.65,'2023-09-18 00:00:00',3161,5010),
+(70093,760.30,'2023-11-20 00:00:00',3025,5017),
+(70094,1340.50,'2023-12-28 00:00:00',3064,5018),
+(70095,3210.80,'2023-02-05 00:00:00',3123,5018),
+(70096,950.40,'2023-04-10 00:00:00',3180,5019),
+(70097,2450.60,'2023-06-15 00:00:00',3033,5018),
+(70098,4120.75,'2023-08-20 00:00:00',3085,5017),
+(70099,540.25,'2023-10-30 00:00:00',3131,5019),
+(70100,1180.90,'2023-01-10 00:00:00',3187,5006),
+(70101,3360.40,'2023-03-15 00:00:00',3010,5007),
+(70102,790.30,'2023-05-20 00:00:00',3067,5010),
+(70103,2240.15,'2023-07-25 00:00:00',3114,5015),
+(70104,4480.50,'2023-09-30 00:00:00',3176,5010),
+(70105,620.45,'2023-11-05 00:00:00',3020,5016),
+(70106,1420.70,'2023-12-15 00:00:00',3078,5005),
+(70107,3190.25,'2023-02-20 00:00:00',3137,5013),
+(70108,870.60,'2023-04-25 00:00:00',3189,5003),
+(70109,2510.90,'2023-07-01 00:00:00',3037,5012),
+(70110,4290.35,'2023-09-10 00:00:00',3090,5019),
+(70111,510.15,'2023-11-15 00:00:00',3144,5002),
+(70112,1310.40,'2023-12-20 00:00:00',3198,5007),
+(70113,3420.65,'2023-02-28 00:00:00',3008,5008),
+(70114,980.20,'2023-04-30 00:00:00',3061,5020),
+(70115,2370.50,'2023-07-15 00:00:00',3122,5010),
+(70116,4050.75,'2023-09-25 00:00:00',3175,5019),
+(70117,690.30,'2023-11-30 00:00:00',3021,5016),
+(70118,1540.85,'2023-01-05 00:00:00',3080,5005),
+(70119,3280.40,'2023-03-10 00:00:00',3141,5007),
+(70120,720.55,'2023-05-15 00:00:00',3193,5004),
+(70121,2140.20,'2023-07-20 00:00:00',3002,5004),
+(70122,4420.90,'2023-10-01 00:00:00',3070,5006),
+(70123,580.45,'2023-11-05 00:00:00',3134,5010),
+(70124,1370.70,'2023-12-10 00:00:00',3188,5010),
+(70125,3350.25,'2023-02-15 00:00:00',3011,5019),
+(70126,840.60,'2023-04-20 00:00:00',3068,5020),
+(70127,2460.90,'2023-06-25 00:00:00',3125,5001),
+(70128,4190.35,'2023-09-05 00:00:00',3179,5018),
+(70129,640.15,'2023-11-10 00:00:00',3023,5016),
+(70130,1450.40,'2023-12-15 00:00:00',3083,5004),
+(70131,3230.65,'2023-02-20 00:00:00',3143,5009),
+(70132,910.20,'2023-04-25 00:00:00',3194,5020),
+(70133,2320.50,'2023-06-30 00:00:00',3005,5012),
+(70134,4010.75,'2023-09-05 00:00:00',3069,5020),
+(70135,710.30,'2023-11-10 00:00:00',3132,5014),
+(70136,1510.85,'2023-12-15 00:00:00',3186,5001),
+(70137,3110.40,'2023-01-20 00:00:00',3016,5008),
+(70138,770.55,'2023-03-25 00:00:00',3074,5008),
+(70139,2210.20,'2023-05-30 00:00:00',3136,5014),
+(70140,4390.90,'2023-08-05 00:00:00',3195,5004),
+(70141,550.45,'2023-10-10 00:00:00',3024,5012),
+(70142,1260.70,'2023-11-15 00:00:00',3082,5006),
+(70143,3470.25,'2023-12-20 00:00:00',3145,5002),
+(70144,820.60,'2023-01-25 00:00:00',3192,5006),
+(70145,2410.90,'2023-03-30 00:00:00',3013,5003),
+(70146,4250.35,'2023-06-05 00:00:00',3076,5020),
+(70147,610.15,'2023-08-10 00:00:00',3135,5010),
+(70148,1380.40,'2023-10-15 00:00:00',3183,5005),
+(70149,3150.65,'2023-12-20 00:00:00',3028,5002),
+(70150,940.20,'2023-01-25 00:00:00',3087,5018);
+/*!40000 ALTER TABLE `orders` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `salesman`
+--
+
+DROP TABLE IF EXISTS `salesman`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8mb4 */;
+CREATE TABLE `salesman` (
+  `salesman_id` int(11) NOT NULL,
+  `name` varchar(200) DEFAULT NULL,
+  `city` varchar(50) DEFAULT NULL,
+  `commission` double(10,2) DEFAULT NULL,
+  PRIMARY KEY (`salesman_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `salesman`
+--
+
+LOCK TABLES `salesman` WRITE;
+/*!40000 ALTER TABLE `salesman` DISABLE KEYS */;
+INSERT INTO `salesman` VALUES
+(5001,'Arjun Mehta','Sydney',0.12),
+(5002,'Sophie Dubois','London',0.15),
+(5003,'Liam O’Connor','Paris',0.13),
+(5004,'Isabella Rossi','Paris',0.11),
+(5005,'Kenji Tanaka','Berlin',0.12),
+(5006,'Hans Müller','Berlin',0.12),
+(5007,'Elena Ricci','San Jose',0.11),
+(5008,'Marcus Aurelius','New York',0.12),
+(5009,'Sarah Jenkins','London',0.11),
+(5010,'Hiroshi Sato','Paris',0.12),
+(5011,'Fatima Zahra','Rome',0.12),
+(5012,'Mateo Garcia','Madrid',0.11),
+(5013,'Chloe Lefebvre','Toronto',0.13),
+(5014,'Lars Nielsen','Berlin',0.13),
+(5015,'Priya Sharma','Rome',0.11),
+(5016,'Diego Torres','Tokyo',0.15),
+(5017,'Amina Abadi','Rome',0.13),
+(5018,'Oliver Twist','Berlin',0.13),
+(5019,'Yuki Tanaka','New York',0.11),
+(5020,'Lucas Meyer','Madrid',0.11);
+/*!40000 ALTER TABLE `salesman` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2026-03-22 19:31:17

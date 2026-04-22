@@ -1,6 +1,6 @@
+package Week10;
 import java.util.*;
 import java.util.stream.*;
-import java.util.function.*;
 
 public class Week10_labs
 {

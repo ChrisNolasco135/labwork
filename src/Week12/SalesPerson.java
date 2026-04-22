@@ -1,3 +1,4 @@
+package Week12;
 public class SalesPerson {
     private String name;
     private String city;
