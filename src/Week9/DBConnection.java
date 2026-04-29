@@ -55,18 +55,16 @@ public class DBConnection {
 
             Connection conn = DriverManager.getConnection(url, username, password);
 
-            String query = """
-                SELECT 
-                    o.order_no,
-                    c.customer_name,
-                    c.city,
-                    s.name,
-                    o.purchase_amt,
-                    s.commission
-                FROM orders o
-                JOIN customer c ON o.customer_id = c.customer_id
-                JOIN salesman s ON o.salesman_id = s.salesman_id
-            """;
+            String query = "SELECT "
+                    + "o.order_no, "
+                    + "c.customer_name, "
+                    + "c.city, "
+                    + "s.name, "
+                    + "o.purchase_amt, "
+                    + "s.commission "
+                    + "FROM orders o "
+                    + "JOIN customer c ON o.customer_id = c.customer_id "
+                    + "JOIN salesman s ON o.salesman_id = s.salesman_id";
 
             Statement stmt = conn.createStatement();
             ResultSet rs = stmt.executeQuery(query);
